@@ -11,8 +11,8 @@
 | `chore`    | Repository maintenance, such as `.gitignore` updates   |
 
 Examples
-feat(api): add mortgage assessment endpoint
-fix(eligibility): handle applications at the maximum LTV
+feat/api: add mortgage assessment endpoint
+fix/eligibility: handle applications at the maximum LTV
 test: cover funder matching rules
 docs: document lending assumptions
 build: add Docker image
