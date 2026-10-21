@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.kyan.mortgagematcher.api.dto.MortgageAssessmentRequest;
 
+import jakarta.validation.Valid;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -13,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class MortgageAssessmentController {
 
     @PostMapping("/mortgage-assessment")
-    public String postMethodName(@RequestBody MortgageAssessmentRequest mortgageAssessmentRequest) {
+    public String assess(@Valid @RequestBody MortgageAssessmentRequest mortgageAssessmentRequest) {
         // TODO: process POST request
+
+        // Use assessmentService to access the request: TODO
 
         return "This is the mortgage assessment endpoint.";
     }
