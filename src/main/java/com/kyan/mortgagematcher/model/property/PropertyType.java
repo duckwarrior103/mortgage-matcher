@@ -1,4 +1,4 @@
-package com.kyan.mortgagematcher.model;
+package com.kyan.mortgagematcher.model.property;
 
 public enum PropertyType {
     STANDARD,
