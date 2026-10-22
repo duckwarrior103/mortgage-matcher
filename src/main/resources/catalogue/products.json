@@ -1,0 +1,70 @@
+[
+  {
+    "id": "STANDARD_65",
+    "name": "Standard Buy-to-Let 65",
+    "annualInterestRate": 0.045,
+    "fixedRateMonths": 60,
+    "criteria": {
+      "minLoanAmount": 50000,
+      "maxLoanAmount": 1000000,
+      "maxLtv": 0.65,
+      "annualStressRate": 0.055,
+      "minIcr": 1.25,
+      "allowedPropertyTypes": ["STANDARD"],
+      "allowedApplicantTypes": ["INDIVIDUAL", "LIMITED_COMPANY"],
+      "allowedLocations": ["ENGLAND", "WALES", "SCOTLAND"],
+      "landlordExperienceRequired": false
+    }
+  },
+  {
+    "id": "STANDARD_75",
+    "name": "Standard Buy-to-Let 75",
+    "annualInterestRate": 0.05,
+    "fixedRateMonths": 60,
+    "criteria": {
+      "minLoanAmount": 50000,
+      "maxLoanAmount": 1000000,
+      "maxLtv": 0.75,
+      "annualStressRate": 0.06,
+      "minIcr": 1.25,
+      "allowedPropertyTypes": ["STANDARD"],
+      "allowedApplicantTypes": ["INDIVIDUAL", "LIMITED_COMPANY"],
+      "allowedLocations": ["ENGLAND", "WALES", "SCOTLAND"],
+      "landlordExperienceRequired": false
+    }
+  },
+  {
+    "id": "HMO_70",
+    "name": "Specialist HMO 70",
+    "annualInterestRate": 0.055,
+    "fixedRateMonths": 60,
+    "criteria": {
+      "minLoanAmount": 100000,
+      "maxLoanAmount": 1000000,
+      "maxLtv": 0.7,
+      "annualStressRate": 0.065,
+      "minIcr": 1.45,
+      "allowedPropertyTypes": ["HMO"],
+      "allowedApplicantTypes": ["INDIVIDUAL", "LIMITED_COMPANY"],
+      "allowedLocations": ["ENGLAND", "WALES"],
+      "landlordExperienceRequired": true
+    }
+  },
+  {
+    "id": "MULTI_UNIT_65",
+    "name": "Specialist Multi-Unit 65",
+    "annualInterestRate": 0.0575,
+    "fixedRateMonths": 60,
+    "criteria": {
+      "minLoanAmount": 150000,
+      "maxLoanAmount": 1000000,
+      "maxLtv": 0.65,
+      "annualStressRate": 0.0675,
+      "minIcr": 1.45,
+      "allowedPropertyTypes": ["MULTI_UNIT_BLOCK"],
+      "allowedApplicantTypes": ["INDIVIDUAL", "LIMITED_COMPANY"],
+      "allowedLocations": ["ENGLAND", "WALES"],
+      "landlordExperienceRequired": true
+    }
+  }
+]
