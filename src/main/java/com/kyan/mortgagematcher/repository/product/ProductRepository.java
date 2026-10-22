@@ -1,4 +1,4 @@
-package com.kyan.mortgagematcher.repository;
+package com.kyan.mortgagematcher.repository.product;
 
 import java.util.List;
 
@@ -8,5 +8,5 @@ import com.kyan.mortgagematcher.model.product.MortgageProduct;
 public interface ProductRepository {
     public List<MortgageProduct> findAll();
 
-    public List<MortgageProduct> findById();
+    public List<MortgageProduct> findById(final String id);
 }
