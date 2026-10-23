@@ -4,7 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kyan.mortgagematcher.api.dto.MortgageAssessmentRequest;
-import com.kyan.mortgagematcher.service.MortgageAssessmentService;
+import com.kyan.mortgagematcher.api.dto.MortgageAssessmentResponse;
+import com.kyan.mortgagematcher.service.assessment.MortgageAssessmentService;
 
 import jakarta.validation.Valid;
 
@@ -22,7 +23,7 @@ public class MortgageAssessmentController {
     }
 
     @PostMapping("/mortgage-assessment")
-    public String assess(@Valid @RequestBody MortgageAssessmentRequest mortgageAssessmentRequest) {
+    public MortgageAssessmentResponse assess(@Valid @RequestBody MortgageAssessmentRequest mortgageAssessmentRequest) {
         return mortgageAssessmentService.assess(mortgageAssessmentRequest);
     }
 
