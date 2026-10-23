@@ -110,12 +110,33 @@ Representative response:
         "Rental income does not meet the product's stress test"
       ],
       "funders": []
+    },
+    {
+      "productId": "PRODUCT-1",
+      "productName": "Product PRODUCT-1",
+      "eligible": true,
+      "available": true,
+      "reasons": [],
+      "funders": [
+        {
+          "funderId": "PASSING-FUNDER",
+          "funderName": "Passing Funder",
+          "available": true,
+          "reasons": []
+        },
+        {
+          "funderId": "STRICT-FUNDER",
+          "funderName": "Strict Funder",
+          "available": false,
+          "reasons": ["LTV exceeds the funder's maximum"]
+        }
+      ]
     }
   ]
 }
 ```
 
-The request requires a non-blank `caseReference`, a positive `loanAmount`, positive property value and rental income, supported enum values, and a non-null `isExperienced` flag. The current catalogue contains products `STANDARD_65`, `STANDARD_75`, `HMO_70`, and `MULTI_UNIT_65`, plus funders `NORTHSTAR`, `HORIZON`, and `SPECIALIST`.
+The request requires a non-blank `caseReference`, a positive `loanAmount`, positive property value and rental income, supported enum values, and a non-null `isExperienced` flag. The current catalogue contains products `STANDARD_65`, `STANDARD_75`, `HMO_70`, `MULTI_UNIT_65`, and `PRODUCT-1`, plus funders `NORTHSTAR`, `HORIZON`, `SPECIALIST`, `PASSING-FUNDER`, and `STRICT-FUNDER`.
 
 Springdoc OpenAPI is included. When the application is running, open [Swagger UI](http://localhost:8080/swagger-ui/index.html); `/swagger-ui.html` is also supported as the conventional redirect URL.
 
