@@ -93,6 +93,42 @@ class MortgageAssessmentServiceTest {
         }
 
         @Test
+        void eligibleProductIsAvailableWhenOnlySomeFundersAcceptIt() {
+                // given
+                given(productRepository.findAll()).willReturn(List.of(product("PRODUCT-1")));
+                given(funderRepository.findAll()).willReturn(List.of(
+                                new Funder(
+                                                "PASSING-FUNDER",
+                                                "Passing Funder",
+                                                List.of(policy("PRODUCT-1", "0.75", false))),
+                                new Funder(
+                                                "STRICT-FUNDER",
+                                                "Strict Funder",
+                                                List.of(policy("PRODUCT-1", "0.65", false)))));
+
+                // when
+                MortgageAssessmentResponse response = service.assess(request("CASE-MIXED-001"));
+
+                // then
+                MortgageAssessmentResponse.ProductAssessment assessment = response.products().get(0);
+
+                assertThat(assessment.eligible()).isTrue();
+                assertThat(assessment.available()).isTrue();
+                assertThat(assessment.reasons()).isEmpty();
+                assertThat(assessment.funders()).containsExactly(
+                                new MortgageAssessmentResponse.FunderAssessment(
+                                                "PASSING-FUNDER",
+                                                "Passing Funder",
+                                                true,
+                                                List.of()),
+                                new MortgageAssessmentResponse.FunderAssessment(
+                                                "STRICT-FUNDER",
+                                                "Strict Funder",
+                                                false,
+                                                List.of("LTV exceeds the funder's maximum")));
+        }
+
+        @Test
         void rejectingFunderMakesEligibleProductUnavailableWithFunderReasons() {
                 // given
                 given(productRepository.findAll()).willReturn(List.of(product("PRODUCT-1")));

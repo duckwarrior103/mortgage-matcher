@@ -19,10 +19,12 @@ class JsonFunderRepositoryTest {
     void loadsFundersFromClasspathJson() {
         List<Funder> funders = repository.findAll();
 
-        assertThat(funders).hasSize(3);
+        assertThat(funders).hasSize(5);
         assertThat(funders.get(0).id()).isEqualTo("NORTHSTAR");
         assertThat(funders.get(1).id()).isEqualTo("HORIZON");
         assertThat(funders.get(2).id()).isEqualTo("SPECIALIST");
+        assertThat(funders.get(3).id()).isEqualTo("PASSING-FUNDER");
+        assertThat(funders.get(4).id()).isEqualTo("STRICT-FUNDER");
     }
 
     @Test
