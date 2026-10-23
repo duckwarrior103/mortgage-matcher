@@ -1,0 +1,74 @@
+[
+  {
+    "id": "NORTHSTAR",
+    "name": "Northstar Bank",
+    "policies": [
+      {
+        "productId": "STANDARD_65",
+        "allowedLocations": ["ENGLAND", "WALES", "SCOTLAND"],
+        "maxLtv": 0.65,
+        "landlordExperienceRequired": false
+      }
+    ]
+  },
+  {
+    "id": "HORIZON",
+    "name": "Horizon Lending Fund",
+    "policies": [
+      {
+        "productId": "STANDARD_65",
+        "allowedLocations": ["ENGLAND", "WALES", "SCOTLAND"],
+        "maxLtv": 0.65,
+        "landlordExperienceRequired": false
+      },
+      {
+        "productId": "STANDARD_75",
+        "allowedLocations": ["ENGLAND", "WALES"],
+        "maxLtv": 0.75,
+        "landlordExperienceRequired": false
+      }
+    ]
+  },
+  {
+    "id": "SPECIALIST",
+    "name": "Specialist Property Fund",
+    "policies": [
+      {
+        "productId": "HMO_70",
+        "allowedLocations": ["ENGLAND", "WALES"],
+        "maxLtv": 0.7,
+        "landlordExperienceRequired": true
+      },
+      {
+        "productId": "MULTI_UNIT_65",
+        "allowedLocations": ["ENGLAND", "WALES"],
+        "maxLtv": 0.65,
+        "landlordExperienceRequired": true
+      }
+    ]
+  },
+  {
+    "id": "PASSING-FUNDER",
+    "name": "Passing Funder",
+    "policies": [
+      {
+        "productId": "PRODUCT-1",
+        "allowedLocations": ["ENGLAND"],
+        "maxLtv": 0.75,
+        "landlordExperienceRequired": false
+      }
+    ]
+  },
+  {
+    "id": "STRICT-FUNDER",
+    "name": "Strict Funder",
+    "policies": [
+      {
+        "productId": "PRODUCT-1",
+        "allowedLocations": ["ENGLAND"],
+        "maxLtv": 0.65,
+        "landlordExperienceRequired": false
+      }
+    ]
+  }
+]
