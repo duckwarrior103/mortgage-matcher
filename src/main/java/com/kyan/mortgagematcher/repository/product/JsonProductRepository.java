@@ -5,6 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
+
 import com.kyan.mortgagematcher.model.product.MortgageProduct;
 
 import tools.jackson.core.type.TypeReference;
@@ -40,10 +42,10 @@ public class JsonProductRepository implements ProductRepository {
     }
 
     @Override
-    public List<MortgageProduct> findById(final String id) {
+    public Optional<MortgageProduct> findById(final String id) {
         return mortgageProducts
                 .stream()
                 .filter(mortgageProduct -> mortgageProduct.id().equals(id))
-                .toList();
+                .findFirst();
     }
 }

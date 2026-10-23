@@ -2,6 +2,7 @@ package com.kyan.mortgagematcher.repository.funder;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -41,10 +42,9 @@ public class JsonFunderRepository implements FunderRepository {
     }
 
     @Override
-    public List<Funder> findById(final String id) {
-        return funders
-                .stream()
+    public Optional<Funder> findById(String id) {
+        return funders.stream()
                 .filter(funder -> funder.id().equals(id))
-                .toList();
+                .findFirst();
     }
 }
