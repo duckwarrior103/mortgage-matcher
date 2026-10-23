@@ -66,5 +66,22 @@
       "allowedLocations": ["ENGLAND", "WALES"],
       "landlordExperienceRequired": true
     }
+  },
+  {
+    "id": "PRODUCT-1",
+    "name": "Product PRODUCT-1",
+    "annualInterestRate": 0.05,
+    "fixedRateMonths": 60,
+    "criteria": {
+      "minLoanAmount": 100000,
+      "maxLoanAmount": 1000000,
+      "maxLtv": 0.75,
+      "annualStressRate": 0.05,
+      "minIcr": 1.25,
+      "allowedPropertyTypes": ["STANDARD"],
+      "allowedApplicantTypes": ["INDIVIDUAL"],
+      "allowedLocations": ["ENGLAND"],
+      "landlordExperienceRequired": false
+    }
   }
 ]

@@ -46,5 +46,29 @@
         "landlordExperienceRequired": true
       }
     ]
+  },
+  {
+    "id": "PASSING-FUNDER",
+    "name": "Passing Funder",
+    "policies": [
+      {
+        "productId": "PRODUCT-1",
+        "allowedLocations": ["ENGLAND"],
+        "maxLtv": 0.75,
+        "landlordExperienceRequired": false
+      }
+    ]
+  },
+  {
+    "id": "STRICT-FUNDER",
+    "name": "Strict Funder",
+    "policies": [
+      {
+        "productId": "PRODUCT-1",
+        "allowedLocations": ["ENGLAND"],
+        "maxLtv": 0.65,
+        "landlordExperienceRequired": false
+      }
+    ]
   }
 ]
